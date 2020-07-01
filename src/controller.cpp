@@ -35,6 +35,10 @@ void Controller::HandleInput(bool &running, Snake &snake) const {
           ChangeDirection(snake, Snake::Direction::kRight,
                           Snake::Direction::kLeft);
           break;
+        // Feat: Exit the game on pressing Escape
+        case SDLK_ESCAPE:
+          running = false;
+          break;
       }
     }
   }
